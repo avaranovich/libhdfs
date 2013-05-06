@@ -3,3 +3,4 @@ libhdfs.sublime-workspace
 dist/build
 dist/setup-config
 dist/package.conf.inplace
+src/System/Hdfs/Interop/Wrapper.hs

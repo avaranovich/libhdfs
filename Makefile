@@ -1,5 +1,8 @@
 build:
-	cabal install --extra-include-dirs=$HADOOP_HOME/build/c++/Mac_OS_X-x86_64-64/include --extra-lib-dirs=$HADOOP_HOME/build/c++/Mac_OS_X-x86_64-64/lib
+	cabal --extra-include-dirs=$(HADOOP_HOME)/src/c++/libhdfs --extra-lib-dirs=$(HADOOP_HOME)/src/c++/install/lib install
+
+build-local:
+	cabal --extra-include-dirs=$(LIBHDFS)/native/include --extra-lib-dirs=$(LIBHDFS)/native/lib install
 
 hsc2hs:
 	hsc2hs src/System/Hdfs/Interop/Wrapper.hsc -I $(HADOOP_HOME)/src/c++/libhdfs
